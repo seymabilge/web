@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders Programı Tabloları</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f5f7;
+            color: #222;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a5f;
+        }
+
+        h3 {
+            color: #375a8c;
+            margin-top: 40px;
+        }
+
+        /* Tabloların biçimi değişmeden sadece renkler ve yazı tipi */
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        th, td {
+            border: 2px solid #b5b8bf;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2b5c99;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e8eef6;
+        }
+
+        tr:hover {
+            background-color: #d9e5f2;
+        }
+
+        .internal-table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ders Programı Tabloları</h1>
+
+    <!-- Inline CSS Tablo -->
+    <h3>Tablo1: Inline CSS Tablo (style="")</h3>
+    <table style="width: 60%; border-collapse: collapse;">
+        <tr>
+            <th style="border: 2px solid #b5b8bf; padding: 15px; background-color: #2b5c99; color: white;">Gün</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">08.40 - 09.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">09.40 - 10.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">10.40 - 11.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">11.40 - 12.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">12.40 - 13.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">13.40 - 14.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">14.40 - 15.30</th>
+            <th style="border: 2px solid #b5b8bf; padding: 15px;">15.40 - 16.30</th>
+        </tr>
+        <tr>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">Pazartesi</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">BTE307.01</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">BTE307.01</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">BTE307 LAB</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">BTE307 LAB</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">Salı</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">EGT304.02</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">EGT304.02</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">EGT350.01</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;">EGT350.01</td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+            <td style="border: 2px solid #b5b8bf;padding: 15px;"></td>
+        </tr>
+    </table>
+
+    <!-- Internal CSS tablo -->
+    <h3>Tablo2: Internal CSS Tablo (&lt;style&gt;)</h3>
+    <table class="internal-table">
+        <tr>
+            <th>Gün</th>
+            <th>08.40 - 09.30</th>
+            <th>09.40 - 10.30</th>
+            <th>10.40 - 11.30</th>
+            <th>11.40 - 12.30</th>
+            <th>12.40 - 13.30</th>
+            <th>13.40 - 14.30</th>
+            <th>14.40 - 15.30</th>
+            <th>15.40 - 16.30</th>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>BTE307.01</td>
+            <td>BTE307.01</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>BTE307 LAB</td>
+            <td>BTE307 LAB</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>EGT304.01</td>
+            <td>EGT304.01</td>
+            <td>EGT350.01</td>
+            <td>EGT350.01</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- External CSS tablo -->
+    <h3>Tablo3: External CSS Tablo (&lt;link&gt;)</h3>
+    <table>
+        <tr>
+            <th>Gün</th>
+            <th>08.40 - 09.30</th>
+            <th>09.40 - 10.30</th>
+            <th>10.40 - 11.30</th>
+            <th>11.40 - 12.30</th>
+            <th>12.40 - 13.30</th>
+            <th>13.40 - 14.30</th>
+            <th>14.40 - 15.30</th>
+            <th>15.40 - 16.30</th>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>BTE307.01</td>
+            <td>BTE307.01</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>BTE307 LAB</td>
+            <td>BTE307 LAB</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>EGT304.01</td>
+            <td>EGT304.01</td>
+            <td>EGT350.01</td>
+            <td>EGT350.01</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
