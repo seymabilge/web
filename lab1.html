@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>animasyon</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #fff7f9, #f6f0ff);
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    gap: 60px;
+  }
+
+  .triangle {
+    position: relative; 
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 120px solid; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-timing-function: ease-in-out;
+  }
+
+  
+  .face {
+    position: absolute;
+   
+    top: 50px; 
+    left: 50%;
+   
+    transform: translateX(-50%); 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 35px;
+    margin-bottom: 5px;
+  }
+
+  .eye {
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 50%;
+  }
+
+  
+  .mouth {
+    background: #222;
+  }
+  .smile { width: 28px; height: 8px; border-radius: 0 0 20px 20px; }
+  .sad   { width: 28px; height: 8px; border-radius: 20px 20px 0 0; }
+  
+  .surprised { 
+    width: 10px; height: 10px; border-radius: 50%; 
+    transform: translateY(-5px); 
+  }           
+  .angry { 
+    width: 30px; height: 5px; 
+    transform: rotate(-10deg); 
+  }         
+  .sleepy { 
+    width: 20px; height: 4px; border-radius: 2px; opacity: 0.6; 
+    transform: translateY(3px);
+  }
+
+ 
+  .t1 { border-bottom-color: #ffd6a5; animation: bounce 4s infinite alternate; }
+  .t2 { border-bottom-color: #ffadad; animation: shake 5s infinite alternate; }
+  .t3 { border-bottom-color: #bdb2ff; animation: spin 8s linear infinite; }
+  .t4 { border-bottom-color: #caffbf; animation: upDown 2s infinite; }
+  .t5 { border-bottom-color: #9bf6ff; animation: rotateTilt 6s infinite alternate; }
+
+  @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-25px);} }
+  @keyframes shake { 0%,100%{transform:rotate(0deg);} 25%{transform:rotate(4deg);} 75%{transform:rotate(-4deg);} }
+  @keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+  @keyframes upDown { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-35px);} }
+  @keyframes rotateTilt { 0%{transform:rotate(-10deg);} 100%{transform:rotate(10deg);} }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="triangle t1">
+    <div class="face">
+      <div class="eyes"><div class="eye"></div><div class="eye"></div></div>
+      <div class="mouth smile"></div>
+    </div>
+  </div>
+
+  <div class="triangle t2">
+    <div class="face">
+      <div class="eyes"><div class="eye"></div><div class="eye"></div></div>
+      <div class="mouth sad"></div>
+    </div>
+  </div>
+
+  <div class="triangle t3">
+    <div class="face">
+      <div class="eyes"><div class="eye"></div><div class="eye"></div></div>
+      <div class="mouth surprised"></div>
+    </div>
+  </div>
+
+  <div class="triangle t4">
+    <div class="face">
+      <div class="eyes"><div class="eye"></div><div class="eye"></div></div>
+      <div class="mouth angry"></div>
+    </div>
+  </div>
+
+  <div class="triangle t5">
+    <div class="face">
+      <div class="eyes"><div class="eye"></div><div class="eye"></div></div>
+      <div class="mouth sleepy"></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
